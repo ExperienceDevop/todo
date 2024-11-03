@@ -1,8 +1,9 @@
 [
   {
-    "id": 1,
+    "id": 0,
     "name": "default",
-    "file": "default",
-    "path": "/"
+    "handler": "/default",
+    "path": "/",
+    "method": "GET"
   }
 ]

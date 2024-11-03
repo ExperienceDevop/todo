@@ -1,0 +1,12 @@
+{
+  "app": {
+    "server_path": "/server.js",
+    "router_path": "/router.js"
+  },
+  "server": {
+    
+  },
+  "router": {
+    "route_handlers_path": "/route_handlers"
+  }
+}

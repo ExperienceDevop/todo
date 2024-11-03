@@ -1,12 +1,11 @@
 const root = __dirname
-const server = require (`${root}/server`)
-const routes = require (`${root}/routes.json`)
+const config = require (`${root}/config.json`)
+const app = require (`${root}${config.app_path}`)
+const routes = require (`${root}${config.routes_path}`)
 
-server.init ()
-server.set ({port: 8888})
+const server = app.serve (config.server)
+const router = app.route ({routes, root})
 
-const route = server.route (routes)
+server.wait ()
 
-server.spectate ()
-
-console.log (route)
+console.log (router)

@@ -1,0 +1,7 @@
+{
+  "app_path": "/app",
+  "server": {
+    "port": 8888
+  },
+  "routes_path": "/routes.json"
+}
