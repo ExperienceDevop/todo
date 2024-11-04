@@ -14,8 +14,7 @@ const Handler = (props)=>
 
 const get = (props)=>
 {
-
-  return props.express.get (props.data.path, (request, response)=>{
+  props.express.get (props.data.path, (request, response)=>{
     response.send ('Works')
   })
 }
