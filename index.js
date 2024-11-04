@@ -8,4 +8,4 @@ const router = app.route ({routes, root})
 
 server.wait ()
 
-console.log (router)
+console.dir (router, {depth: 4})

@@ -1,4 +1,5 @@
 const fs = require ('fs')
+const { threadId } = require('worker_threads')
 const Router = class
 {
   #express
@@ -18,13 +19,16 @@ const Router = class
       this.#data = props.data.routes
       for (let x in this.#data)
       {
-        this.routes[this.#data[x].id] = {
+        const data = {
           id: this.#data[x].id,
-          method: this.#data[x].method,
+          name : this.#data[x].name,
+          methods: this.#data[x].methods,
           path: this.#data[x].path
         }
         
-        this.routes[this.#data[x].id].handler = require (`${this.#handlers}${this.#data[x].handler}`)
+        this.routes[this.#data[x].id] = data
+        
+        this.routes[this.#data[x].id].handler = require (`${this.#handlers}${this.#data[x].handler}`) ({data, express: this.#express})
       }
     }
   }

@@ -4,6 +4,13 @@
     "name": "default",
     "handler": "/default",
     "path": "/",
-    "method": "GET"
+    "methods": ["GET"]
+  },
+  {
+    "id": 1,
+    "name": "404",
+    "handler": "/404",
+    "path": "*",
+    "methods": ["GET"]
   }
 ]
