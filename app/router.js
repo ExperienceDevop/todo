@@ -23,7 +23,9 @@ const Router = class
           id: this.#data[x].id,
           name : this.#data[x].name,
           methods: this.#data[x].methods,
-          path: this.#data[x].path
+          path: this.#data[x].path,
+          status: this.#data[x].status,
+          content_type: this.#data[x].content_type
         }
         
         this.routes[this.#data[x].id] = data
@@ -31,10 +33,6 @@ const Router = class
         this.routes[this.#data[x].id].handler = require (`${this.#handlers}${this.#data[x].handler}`) ({data, express: this.#express})
       }
     }
-  }
-  #setRoutes ()
-  {
-
   }
 }
 

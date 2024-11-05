@@ -4,13 +4,17 @@
     "name": "default",
     "handler": "/default",
     "path": "/",
-    "methods": ["GET"]
+    "methods": ["GET"],
+    "status": 200,
+    "content_type": "text/plain"
   },
   {
     "id": 1,
     "name": "404",
     "handler": "/404",
     "path": "*",
-    "methods": ["GET"]
+    "methods": ["GET"],
+    "status": 404,
+    "content_type": "text/plain"
   }
 ]
